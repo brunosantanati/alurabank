@@ -10,7 +10,7 @@ class NegociacaoController {
         event.preventDefault();
         const negociacao = new Negociacao(new Date(this._inputData.value.replace(/-/g, ',')), parseInt(this._inputQuantidade.value), parseFloat(this._inputValor.value));
         this._negociacoes.adiciona(negociacao);
-        //this._negociacoes.paraArray().length = 0; //limpa o array, isso não deveria ser possível
+        this._negociacoes.paraArray().length = 0; //agora apaga a cópia recebida e não o array original
         this._negociacoes.paraArray().forEach(negociacao => {
             console.log(negociacao.data);
             console.log(negociacao.quantidade);

@@ -24,7 +24,7 @@ class NegociacaoController{
 
         this._negociacoes.adiciona(negociacao);
 
-        //this._negociacoes.paraArray().length = 0; //limpa o array, isso não deveria ser possível
+        this._negociacoes.paraArray().length = 0; //agora apaga a cópia recebida e não o array original
 
         this._negociacoes.paraArray().forEach(negociacao => {
             console.log(negociacao.data);
