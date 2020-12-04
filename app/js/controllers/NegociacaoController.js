@@ -1,5 +1,7 @@
 class NegociacaoController {
     constructor() {
+        //private _negociacoes: Negociacoes = new Negociacoes(); //não precisa declarar o tipo nesse caso
+        this._negociacoes = new Negociacoes();
         this._inputData = document.querySelector('#data');
         this._inputQuantidade = document.querySelector('#quantidade');
         this._inputValor = document.querySelector('#valor');
@@ -7,6 +9,12 @@ class NegociacaoController {
     adiciona(event) {
         event.preventDefault();
         const negociacao = new Negociacao(new Date(this._inputData.value.replace(/-/g, ',')), parseInt(this._inputQuantidade.value), parseFloat(this._inputValor.value));
-        console.log(negociacao);
+        this._negociacoes.adiciona(negociacao);
+        //this._negociacoes.paraArray().length = 0; //limpa o array, isso não deveria ser possível
+        this._negociacoes.paraArray().forEach(negociacao => {
+            console.log(negociacao.data);
+            console.log(negociacao.quantidade);
+            console.log(negociacao.valor);
+        });
     }
 }
