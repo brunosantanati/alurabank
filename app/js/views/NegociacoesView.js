@@ -26,7 +26,7 @@ class NegociacoesView {
                         <td>${negociacao.valor}</td>
                         <td>${negociacao.volume}</td>
                     </tr>
-                    `).join()}
+                    `).join('')}
             <tfoot>
             </tfoot>
         </table>
