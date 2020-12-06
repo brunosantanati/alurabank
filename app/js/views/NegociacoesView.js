@@ -19,16 +19,14 @@ class NegociacoesView {
 
             <tbody>
             </tbody>
-                ${model.paraArray().map(negociacao => {
-            return `
+                ${model.paraArray().map(negociacao => `
                     <tr>
                         <td>${negociacao.data.getDate() / negociacao.data.getMonth() + 1 / negociacao.data.getFullYear()}</td>
                         <td>${negociacao.quantidade}</td>
                         <td>${negociacao.valor}</td>
                         <td>${negociacao.volume}</td>
                     </tr>
-                    `;
-        }).join()}
+                    `).join()}
             <tfoot>
             </tfoot>
         </table>
