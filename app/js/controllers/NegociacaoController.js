@@ -2,9 +2,11 @@ class NegociacaoController {
     constructor() {
         //private _negociacoes: Negociacoes = new Negociacoes(); //não precisa declarar o tipo nesse caso
         this._negociacoes = new Negociacoes();
+        this._negociacoesView = new NegociacoesView('#negociacoesView');
         this._inputData = document.querySelector('#data');
         this._inputQuantidade = document.querySelector('#quantidade');
         this._inputValor = document.querySelector('#valor');
+        this._negociacoesView.update();
     }
     adiciona(event) {
         event.preventDefault();
