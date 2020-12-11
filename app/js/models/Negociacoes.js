@@ -1,7 +1,6 @@
 class Negociacoes {
     constructor() {
-        //private _negociacoes: Array<Negociacao> = []; //primeira forma de declarar Array
-        this._negociacoes = []; //outra forma de declarar o Array
+        this._negociacoes = [];
     }
     adiciona(negociacao) {
         this._negociacoes.push(negociacao);
